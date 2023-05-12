@@ -84,6 +84,16 @@ const Tab = styled.span<{ isActive: boolean }>`
     display: block;
   }
 `;
+const ReturnBtn = styled.button`
+  background-color: ${(props) => props.theme.accentColor};
+  border-radius: 25px;
+  margin-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 9px;
+  padding-right: 9px;
+  color: ${(props) => props.theme.textColor};
+`;
 
 interface RouteParams {
   coinId: string;
@@ -174,6 +184,9 @@ function Coin({ isDark }: ICoinProps) {
         </title>
       </Helmet>
       <Header>
+        <Link to="/">
+          <ReturnBtn>Home</ReturnBtn>
+        </Link>
         <Title>
           {state?.name ? state.name : loading ? "Loading..." : infoData?.name}
         </Title>

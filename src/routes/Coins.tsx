@@ -62,6 +62,8 @@ const Img = styled.img`
   margin-right: 10px;
 `;
 
+const ReturnBtn = styled.button``;
+
 interface ICoin {
   id: string;
   name: string;
@@ -86,6 +88,7 @@ function Coins({ toggleDark }: ICoinsProps) {
       <Header>
         <Title>Coin</Title>
         <ToggleButton onClick={toggleDark}>Theme</ToggleButton>
+        <Link to="/"></Link>
       </Header>
       {isLoading ? (
         <Loader>Loading...</Loader>

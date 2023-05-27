@@ -86,12 +86,10 @@ function Coins() {
     <Container>
       <Helmet>
         <title>Coin</title>
-        <button onClick={toggleDarkAtom}>Toggle Mode</button>
       </Helmet>
       <Header>
         <Title>Coin</Title>
-
-        <Link to="/"></Link>
+        <button onClick={toggleDarkAtom}>Toggle Mode</button>
       </Header>
       {isLoading ? (
         <Loader>Loading...</Loader>
